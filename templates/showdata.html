@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+
+{% load static %}
+{% block body%}
+
+
+<div class="container my-2">
+  <div class="card">
+      <!-- <div class="card-header"> -->
+      
+          <ul class="list-group">
+              
+              <li class="list-group-item list-group-item-primary">
+
+                  
+                  <h2 class="text-center">All Data From Users</h2>
+                  
+              </li>
+              
+            </ul>
+      
+      <!-- </div> -->
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="container my-2">
+      <div class="card">
+          <!-- <div class="card-header"> -->
+          
+              <ul class="list-group">
+                  
+                <li class="list-group-item list-group-item-warning">
+    
+                      
+    <div class="container">
+    
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Degree</th> -->
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Message</th>
+          </tr>
+        </thead>
+
+
+
+        <tbody>
+
+         {% for i in Contact %}
+
+
+          <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.message}}</td>
+          </tr>
+
+
+
+          {% endfor %}
+
+
+        </tbody> 
+
+      </table>
+    
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="container mt-5"></div>
+
+
+
+  
+<div >
+      <ul class="list-group">
+       
+        
+        <div class="text-center">
+          <li class="list-group-item list-group-item-dark">Copyright © Mohammad Salman - 201-15-14165. All Rights Reserved. Design & Developed by Mohammad Salman.</li>
+        </div>
+      </ul>
+</div>    
+
+
+{% endblock %}
